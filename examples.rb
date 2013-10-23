@@ -21,14 +21,23 @@ class Examples < Sinatra::Base
     /__coffee__/bigbang.js
   }
 
-  HEROKU_SNAKE = 'http://bigbang-snake.herokuapp.com'
-  SNAKE = ENV['snake_url'] || HEROKU_SNAKE
+  COPYRIGHT     = 'Felix C. Stegerman'
+  LINK_BB       = 'https://github.com/obfusk/bigbang.coffee'
+  LINK_GH       = 'https://github.com/obfusk/bigbang-examples'
+  HEROKU_SNAKE  = 'http://bigbang-snake.herokuapp.com'
+  SNAKE         = ENV['SNAKE_URL'] || HEROKU_SNAKE
+
+  NAV = %w{ foo bar baz snake }.map do |x|
+    { link: "/#{x}", title: x }
+  end
 
   get '/' do
+    @link = '/'
     haml :index
   end
 
   get '/foo' do
+    @link = '/foo'
     haml :foo
   end
 

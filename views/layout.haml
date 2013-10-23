@@ -1,0 +1,27 @@
+- a = -> x { x[:link] == @link ? 'active' : nil }
+
+!!!
+%html
+  %head
+    %title bigbang.coffee examples
+    %meta{ 'http-equiv' => 'Content-Type',
+           content: 'text/html;charset=utf-8' }
+    %link{ rel: 'stylesheet', type: 'text/css',
+           href: '/css/bootstrap.min.css' }
+    %link{ rel: 'stylesheet', type: 'text/css',
+           href: '/css/examples.css' }
+  %body
+    .navbar.navbar-default.navbar-fixed-top
+      .container.w800
+        .navbar-header
+          %a.navbar-brand{ href: '/' } bigbang.coffee examples
+        %ul.nav.navbar-nav.navbar-right
+          - NAV.each do |x|
+            %li{ class: a[x] }
+              %a{ href: x[:link] }&= x[:title]
+    .container.w800
+      != yield
+      %br
+      %hr
+      %footer
+        %p © #{Time.now.strftime '%Y'} #{COPYRIGHT}
