@@ -15,9 +15,16 @@ require 'sinatra/base'
 
 class Examples < Sinatra::Base
 
+  CSS = %w{
+    /css/bootstrap.min.css
+    /css/hljs/docco.css
+    /css/examples.css
+  }
+
   SCRIPTS = %w{
     /js/jquery.min.js
     /js/underscore.min.js
+    /js/highlight.pack.js
     /__coffee__/bigbang.js
   }
 
@@ -27,18 +34,18 @@ class Examples < Sinatra::Base
   HEROKU_SNAKE  = 'http://bigbang-snake.herokuapp.com'
   SNAKE         = ENV['SNAKE_URL'] || HEROKU_SNAKE
 
-  NAV = %w{ foo bar baz snake }.map do |x|
+  NAV = %w{ counter snake }.map do |x|
     { link: "/#{x}", title: x }
   end
 
   get '/' do
-    @link = '/'
     haml :index
   end
 
-  get '/foo' do
-    @link = '/foo'
-    haml :foo
+  get '/counter' do
+    @link     = '/counter'
+    @scripts  = SCRIPTS + %w{ /__coffee__/counter.js }
+    haml :counter
   end
 
   get '/snake' do

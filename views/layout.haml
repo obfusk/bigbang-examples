@@ -6,10 +6,11 @@
     %title bigbang.coffee examples
     %meta{ 'http-equiv' => 'Content-Type',
            content: 'text/html;charset=utf-8' }
-    %link{ rel: 'stylesheet', type: 'text/css',
-           href: '/css/bootstrap.min.css' }
-    %link{ rel: 'stylesheet', type: 'text/css',
-           href: '/css/examples.css' }
+    - (CSS + (@css || [])).each do |src|
+      %link{ rel: 'stylesheet', type: 'text/css',
+             href: src }
+    - (@scripts || []).each do |src|
+      %script{ type: 'text/javascript', src: src }
   %body
     .navbar.navbar-default.navbar-fixed-top
       .container.w800

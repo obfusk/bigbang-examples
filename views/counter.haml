@@ -1,0 +1,14 @@
+.jumbotron
+  .container
+    %h1 counter example
+    %p
+      Click the button to start or stop the counter; the counter will
+      update every second, counting down from 10 to 0, followed by
+      "boom!".
+    %br
+    %p
+      %span#counter.label.label-default ...
+      %a#start.btn.btn-primary.btn-lg ...
+.container
+  %pre
+    %code&= File.read 'views/coffee/counter.coffee'

@@ -14,7 +14,8 @@
 
   bigbang-examples - bigbang.coffee examples
 
-  Examples for the bigbang.coffee [1] library.
+  Examples for the bigbang.coffee [1] library.  See also
+  bigbang-snake [2].
 
   To run, you will need bigbang.coffee; when using git, use `git
   submodule init` and `git submodule update` to fetch and use the
@@ -25,7 +26,7 @@
 ## License
 []: {{{1
 
-  GPLv2 [2].
+  GPLv2 [3].
 
 []: }}}1
 
@@ -35,7 +36,10 @@
   [1] bigbang.coffee
   --- https://github.com/obfusk/bigbang.coffee
 
-  [2] GNU General Public License, version 2
+  [2] bigbang-snake
+  --- https://github.com/obfusk/bigbang-snake
+
+  [3] GNU General Public License, version 2
   --- http://www.opensource.org/licenses/GPL-2.0
 
 []: }}}1
