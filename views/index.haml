@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title bigbang.coffee examples
+    %meta{ 'http-equiv' => 'Content-Type',
+           content: 'text/html;charset=utf-8' }
+    :css
+      body, html  { width: 100%; height: 100%; margin: 0px; }
+      #link       { text-align: center; padding: 10px; }
+      #examples   { margin: 0 auto; width: 100px;
+                    border: 1px solid black; }
+  %body
+    #link
+      - url = 'https://github.com/obfusk/bigbang-snake'
+      &= '-->'
+      %a{ href: url }&= url
+    %ul#examples
+      - %w{ foo bar baz snake }.each do |x|
+        %li
+          %a{ href: "/#{x}" }&= x
