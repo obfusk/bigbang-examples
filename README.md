@@ -18,8 +18,7 @@
   bigbang-snake [2].
 
   To run, you will need bigbang.coffee; when using git, use `git
-  submodule init` and `git submodule update` to fetch and use the
-  dependencies.
+  submodule update --init` to fetch and use the dependencies.
 
 []: }}}1
 
