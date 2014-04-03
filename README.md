@@ -2,9 +2,9 @@
 
     File        : README.md
     Maintainer  : Felix C. Stegerman <flx@obfusk.net>
-    Date        : 2013-10-23
+    Date        : 2014-04-03
 
-    Copyright   : Copyright (C) 2013  Felix C. Stegerman
+    Copyright   : Copyright (C) 2014  Felix C. Stegerman
     Version     : v0.0.1-SNAPSHOT
 
 []: }}}1
@@ -26,7 +26,7 @@
 ## License
 []: {{{1
 
-  GPLv2 [3].
+  GPLv3+ [3].
 
 []: }}}1
 
@@ -39,8 +39,8 @@
   [2] bigbang-snake
   --- https://github.com/obfusk/bigbang-snake
 
-  [3] GNU General Public License, version 2
-  --- http://www.opensource.org/licenses/GPL-2.0
+  [3] GNU General Public License, version 3
+  --- http://www.gnu.org/licenses/gpl-3.0.html
 
 []: }}}1
 
