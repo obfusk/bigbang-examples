@@ -19,7 +19,7 @@
         %ul.nav.navbar-nav.navbar-right
           - NAV.each do |x|
             %li{ class: a[x] }
-              %a{ href: x[:link] }&= x[:title]
+              %a{ href: x[:link] }= x[:title]
     .container.w800
       != yield
       %br

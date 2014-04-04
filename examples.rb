@@ -34,18 +34,21 @@ class Examples < Sinatra::Base
   HEROKU_SNAKE  = 'http://bigbang-snake.herokuapp.com'
   SNAKE         = ENV['SNAKE_URL'] || HEROKU_SNAKE
 
-  NAV = %w{ counter snake }.map do |x|
+  EXAMPLES      = %w{ counter todo }
+  NAV           = EXAMPLES.map do |x|
     { link: "/#{x}", title: x }
-  end
+  end + [{ link: '/snake', title: '&raquo; snake' }]
 
   get '/' do
     haml :index
   end
 
-  get '/counter' do
-    @link     = '/counter'
-    @scripts  = SCRIPTS + %w{ /__coffee__/counter.js }
-    haml :counter
+  EXAMPLES.each do |ex|
+    get "/#{ex}" do
+      @link     = "/#{ex}"
+      @scripts  = SCRIPTS + %W{ /__coffee__/#{ex}.js }
+      haml ex.to_sym
+    end
   end
 
   get '/snake' do

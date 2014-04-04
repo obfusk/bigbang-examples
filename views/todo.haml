@@ -1,0 +1,19 @@
+.jumbotron
+  .container
+    %h1 TODOs
+    %p
+      \ TODO lists.  Click on an item to delete it.
+.row
+  - %w{ left right }.each do |x|
+    .col-md-6
+      .todo{ id: "todo-#{x}" }
+        .todo-items
+        %form.todo-controls
+          %input.todo-text{ type: 'text' }
+          %input.todo-add{ type: 'submit', value: 'Add' }
+          %button.todo-send
+            \ Send ...
+%hr
+.container
+  %pre
+    %code&= File.read 'views/coffee/todo.coffee'

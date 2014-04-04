@@ -10,7 +10,7 @@
 # --                                                            ; }}}1
 
 # start the universe
-start = () ->
+start = ->
   canvas  = counter: $('#counter'), start: $('#start')
   world   = running: false, count: '...'
   bb_opts =
