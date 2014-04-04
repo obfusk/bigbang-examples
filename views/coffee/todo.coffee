@@ -21,7 +21,7 @@ todo = (div, items = []) ->
   # start
   start = ->
     bb = bigbang
-      canvas: div, world: items,
+      tickless: true, canvas: div, world: items,
       on: { add: to_add, remove: to_remove },
       to_draw: to_draw, setup: setup, teardown: teardown
 
