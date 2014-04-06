@@ -34,7 +34,7 @@ class Examples < Sinatra::Base
   HEROKU_SNAKE  = 'http://bigbang-snake.herokuapp.com'
   SNAKE         = ENV['SNAKE_URL'] || HEROKU_SNAKE
 
-  EXAMPLES      = %w{ counter todo }
+  EXAMPLES      = %w{ counter todolist }
   NAV           = EXAMPLES.map do |x|
     { link: "/#{x}", title: x }
   end + [{ link: '/snake', title: '&raquo; snake' }]

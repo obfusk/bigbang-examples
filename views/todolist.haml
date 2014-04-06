@@ -1,0 +1,25 @@
+.jumbotron
+  .container
+    %h1 TODO list(s)
+    %p
+      This example shows how to create a TODO list and use bigbang to
+      handle events like adding an item, removing an item, and setting
+      the items.
+.row
+  - %w{ left right }.each do |x|
+    .col-md-6
+      .panel.panel-default.todo{ id: "todo-#{x}" }
+        %table.table.table-striped.table-bordered.todo-items
+        .panel-body
+          %form.todo-controls
+            .input-group
+              %input.form-control.todo-text{ type: 'text' }
+              .input-group-btn
+                %button.btn.btn-primary.todo-add
+                  \ Add
+                %button.btn.btn-primary.todo-send
+                  \ Send
+%hr
+.container
+  %pre
+    %code&= File.read 'views/coffee/todolist.coffee'
