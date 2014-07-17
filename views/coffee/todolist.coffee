@@ -92,12 +92,12 @@ todo = (div, opts = {}) ->
     _w = world: items, action: 'set', args: [items]
     _d = to_draw_w_log
     _o = api_w_log _a
-    _s = -> send bb.world().world.slice()
+    _s = -> send bb.world().world
   else
     _w = items
     _d = to_draw
     _o = _a
-    _s = -> send bb.world().slice()
+    _s = -> send bb.world()
 
   # setup handlers
   setup = (c, hs) ->
